@@ -72,7 +72,7 @@ with gr.Blocks() as app:
                              placeholder="Start entering the text")
         textbox1 = gr.Textbox(label="Raw Emoji Output")
         textbox2 = gr.Textbox(label="Text with Emojis")
-    textbox.input(
+    textbox.change(
         fn=emojiprediction.predict_emoji,
         inputs=textbox,
         outputs=[textbox1, textbox2]
